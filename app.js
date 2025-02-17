@@ -241,10 +241,99 @@ for (let i = 0; i < B.length; i++){
 console.log(stringA);
 
 // 4. Surasti stringą su daugiausia žodžių;
+// .split(' ');
+let daugiausiaZ = B[0].split(' ').length;
+let daugiausiaZTekstas = B[0];
+console.log(daugiausiaZ);
+for (let i = 1; i < B.length; i++){
+    let zodziuSkaicius = B[i].split(' ').length;
+    // console.log(`zodziu skaicius: ${zodziuSkaicius}`);
+    if( zodziuSkaicius > daugiausiaZ){
+        daugiausiaZ = zodziuSkaicius;
+        daugiausiaZTekstas = B[i];
+    }
+}
+
+console.log(daugiausiaZ);
+console.log(daugiausiaZTekstas);
+
 // 5. Surasti stringą su mažiausiai žodžių;
+let maziausiaiZ = B[0].split(' ').length;
+let maziausiaiZTekstas = B[0];
+for (let i = 1; i < B.length; i++){
+    let zodziuSkaicius = B[i].split(' ').length;
+    // console.log(`zodziu skaicius: ${zodziuSkaicius}`);
+    if( zodziuSkaicius < maziausiaiZ){
+        maziausiaiZ = zodziuSkaicius;
+        maziausiaiZTekstas = B[i];
+    }
+}
+
+console.log(maziausiaiZ);
+console.log(maziausiaiZTekstas);
+
+
+
 // 6. Suskaičiuoti kiek stringų turi daugiau nei 4 žodžius;
+let skaiciuotiVirs4 = 0;
+for(let i = 0; i < B.length; i++){
+    let zodziuSkaicius = B[i].split(' ').length;
+        // console.log(`zodziu skaicius: ${zodziuSkaicius}`);
+    if (zodziuSkaicius > 4){
+        skaiciuotiVirs4++;
+    }
+}
+
+console.log(`virs 4 zodziu yra: ${skaiciuotiVirs4}`);
+
 // 7. Suskaičiuoti kiek masyve yra žodžių;
+let visoZ = 0;
+for (let i = 0; i < B.length; i++){
+    let zodziuSkaicius = B[i].split(' ').length;
+    visoZ += zodziuSkaicius;
+
+}
+
+console.log(`viso zodziu masyve:${visoZ}`);
+
 // 8. Suskaičiuoti visas ‘s’ raides;
+let sRaidziu = 0;
+for (let i = 0; i < B.length; i++){
+    for (let j = 0; j < B[i].length; j++){
+        if(B[i][j] === 's'){
+            sRaidziu++;
+        }
+    }
+}
+
+console.log(`viso s raidziu masyve:${sRaidziu}`);
+
+
 // 9. Suskaičiuoti kiek masyve yra raidžių (tarpų tarp žodžių neskaičiuoti!);
+let visoR = 0;
+for (let i = 0; i < B.length; i++){
+    visoR += B[i].replace(/\s/g, '').length; //regular expression /description inside/ - \s-all whitespaces, g-globar(not just the first one), replace with ''-no space
+}
+
+console.log(visoR);
+
 // 10. Surasti ilgiausią žodį (ne stringą, o atskirą stringo žodį!);
+let ilgiausiasZ = ''
+
+
+console.log(ilgiausiasZ);
+
+for (let i = 0; i < B.length; i++){
+    let zodziuMasyvas = B[i].split(' ');
+
+    for(let j = 0; j < zodziuMasyvas.length; j++){
+        if (zodziuMasyvas[j].length > ilgiausiasZ.length){
+            ilgiausiasZ = zodziuMasyvas[j];
+        }
+    }
+    
+}
+
+console.log(ilgiausiasZ);
+
 
