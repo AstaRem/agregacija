@@ -149,3 +149,102 @@ console.log(neigiami.length);
 console.log(vidurkis);
 
 
+// B. Masyvas su stringais.
+const B = [
+    'the quick brown fox',
+    'jumps over the lazy dog',
+    'a bird in the hand',
+    'is worth two in the bush',
+    'an apple a day',
+    'keeps the doctor away',
+    'actions speak louder than words',
+    'all good things must come to an end',
+    'beauty is in the eye of the beholder',
+    'better late than never',
+    'birds of a feather flock together',
+    'cleanliness is next to godliness',
+    'dont bite the hand that feeds you',
+    'dont count your chickens before they hatch',
+    'dont put all your eggs in 1 basket',
+    'every cloud has a silver lining',
+    'every dog has its day',
+    'every rose has its thorn',
+    'fortune favors the bold',
+    'good things come to those who wait',
+    'a watched pot never boils',
+    'haste makes waste',
+    'history repeats itself',
+    'cat got your tongue',
+    'home is where the heart is',
+    'if the shoe fits, wear it',
+    'ignorance is bliss',
+    'it takes two to tango',
+    'arabs have 100 words for sand',
+    'kill two birds with one stone',
+    'laughter is the best medicine',
+    'love is blind',
+    'money doesnt grow on trees',
+    'no pain no gain',
+    'nothing ventured nothing gained',
+    'once bitten twice shy',
+    'practice makes perfect',
+    'the early bird catches the worm',
+    'the grass is always greener on the other side',
+    'the pen is mightier than 10 swords',
+    'theres no smoke without fire',
+    'time heals all wounds',
+    '5 second rule',
+    'every dog has its day',
+    'to err is human to forgive divine',
+    '2 wrongs dont make a right',
+    'when in Rome do as the Romans do',
+    'where theres smoke, theres fire',
+    'you cant judge a book by its cover',
+    'you cant make an omelette without breaking eggs',
+    'you reap what you sow',
+    'youre never too old to learn'
+    ];
+
+// 1. Surasti ilgiausią stringą;
+let ilgiausias = ''; //lyginu su tusciu string'u
+for (let i = 0; i < B.length; i++){
+    // console.log(B[i].length);
+    if(B[i].length > ilgiausias.length){
+        ilgiausias = B[i];
+    }
+}
+
+console.log(ilgiausias);
+console.log(ilgiausias.length);
+
+// 2. Surasti trumpiausią stringą;
+let trumpiausias = B[0]; // lyginu su pirmu elementu, darau prioelaida, kad jis trumpiausias
+for (let i = 1; i < B.length; i++){
+    console.log(B[i].length);
+    if(B[i].length < trumpiausias.length){
+        trumpiausias = B[i];
+    }
+}
+
+console.log(trumpiausias);
+console.log(trumpiausias.length);
+
+
+// 3. Surasti stringą, kuris prasideda “a” raide;
+let stringA = [];
+for (let i = 0; i < B.length; i++){
+    if (B[i].charAt(0) === "a" || B[i].charAt(0) === "A" ){
+            stringA.push(B[i]);
+    }
+}
+
+console.log(stringA);
+
+// 4. Surasti stringą su daugiausia žodžių;
+// 5. Surasti stringą su mažiausiai žodžių;
+// 6. Suskaičiuoti kiek stringų turi daugiau nei 4 žodžius;
+// 7. Suskaičiuoti kiek masyve yra žodžių;
+// 8. Suskaičiuoti visas ‘s’ raides;
+// 9. Suskaičiuoti kiek masyve yra raidžių (tarpų tarp žodžių neskaičiuoti!);
+// 10. Surasti ilgiausią žodį (ne stringą, o atskirą stringo žodį!);
+
