@@ -337,3 +337,77 @@ for (let i = 0; i < B.length; i++){
 console.log(ilgiausiasZ);
 
 
+// C. Mišrus masyvas.
+
+const C = [94, true, 'technology', 'year', 34, true, 'flower', 13, 'future', undefined, 0, 12, 'water', 'false', 'school', 'cat', false, 'family', 70, undefined, 'life', 'government', 'mountain', 13, true, 'year', 'sun', 50, 'day', 'food', 0, 'health', 70, 31, 16, 85, 'car', 'internet', 100, 'money', 26, 'fire', 76, [], 45, 'time', 'music', 93, 0, 'love', 69, {}, 96, 0, false, 'air', 'star', 24, 9, 'thing', 19, 'house', 'way', 'true', 90, '0', 'woman', 'time', 'job', '72', '22', 'city', 'history', 47, 'man', 92, 'child', 73, '0', 16, 63, 48, 'country', 45, 'tree', true, 57, 'earth', 96, [], 'hope', 'dream', 39, 43, 'art', 27, 'friend', 'moon', '26', 'science', 74];
+
+// 1. Surasti didžiausią skaičių;
+let numArray = [];
+for (let i = 0; i < C.length; i++){
+    if (typeof C[i] === 'number' ){
+        numArray.push(C[i]);
+    }
+}
+
+let biggest = numArray[0];
+for (let i = 1; i < numArray.length; i++){
+    if(numArray[i] > biggest){
+        biggest = numArray[i]
+    }
+}
+
+console.log(numArray);
+console.log(biggest);
+
+// 2. Surasti trumpiausią stringą;
+
+let onlyStr = [];
+
+
+C.forEach(item => {
+    if(typeof item === "string"){
+        onlyStr.push(item);
+        }
+    }
+);
+let shortestStr = onlyStr[0];
+console.log(shortestStr);
+
+
+
+for (let i = 1; i < onlyStr.length; i++){
+    if(onlyStr[i].length < shortestStr.length ){
+        shortestStr = onlyStr[i];
+    }
+
+}
+
+console.log(onlyStr);
+console.log(shortestStr.length);
+console.log(shortestStr);
+
+// 3. Suskaičiuoti kiek skaičių yra 0-iai (ne stringai ‘0’, o skaičiai!);
+let counting0 = []
+for (let i = 0; i < numArray.length; i++){
+    if (numArray[i] === 0){
+        counting0.push(numArray[i]);
+    }
+}
+console.log(counting0);
+console.log(`the ammount of 0 numbers: ${counting0.length}`);
+
+// 4. Suskaičiuoti teigiamų skaičių sumą (tik skaičių, ne stringų!);
+let countAbove0 = 0 
+for (let i = 0; i < numArray.length; i++){
+    if (numArray[i] > 0){
+        countAbove0 += numArray[i];
+    }
+}
+console.log(countAbove0);
+
+// 5. Suskaičiuoti bendrą visų stringų ilgį;
+// 6. Suskaičiuoti vidutinį stringo ilgį;
+// 7. Suskaičiuoti kiek elementų masyve yra nei stringas nei skaičius;
+// 8. Suskaičiuoti skaičių, kuriuos galima padaryti iš stringų sumą (jeigu stringas verčiasi ne į NaN);
+// 9. Rasti ko yra daugiau- stringų ar skaičių;
+// 10. Rasti ko yra daugiau- loginių true ar false;
