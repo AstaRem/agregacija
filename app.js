@@ -406,8 +406,49 @@ for (let i = 0; i < numArray.length; i++){
 console.log(countAbove0);
 
 // 5. Suskaičiuoti bendrą visų stringų ilgį;
+let stringLength = 0;
+
+
+for (let i = 0; i < C.length; i++){
+    if (typeof C[i] === "string" ){
+        stringLength += C[i].length
+
+    }
+}
+
+console.log(stringLength); //ok
+
+// or
+
+let countStr = 0
+let onlyStrings = C.filter(str => typeof str === "string").map(str => countStr += str.length);
+console.log(onlyStrings)
+console.log(countStr) //ok
+console.log(onlyStrings)
+
+
 // 6. Suskaičiuoti vidutinį stringo ilgį;
+
+let countLength = 0;
+for (let i = 0; i < onlyStr.length; i++){
+    countLength += onlyStr[i].length;
+}
+console.log(onlyStr);
+let avgString = countLength / onlyStr.length;
+
+console.log(avgString.toFixed(2));
+
 // 7. Suskaičiuoti kiek elementų masyve yra nei stringas nei skaičius;
+let notStringNumber = 0;
+C.map(item => {
+    if(typeof item != "string" || typeof item != "number" ){
+        notStringNumber++
+    }
+})
+
+console.log(notStringNumber);
+
+
 // 8. Suskaičiuoti skaičių, kuriuos galima padaryti iš stringų sumą (jeigu stringas verčiasi ne į NaN);
 // 9. Rasti ko yra daugiau- stringų ar skaičių;
 // 10. Rasti ko yra daugiau- loginių true ar false;
