@@ -450,5 +450,82 @@ console.log(notStringNumber);
 
 
 // 8. Suskaičiuoti skaičių, kuriuos galima padaryti iš stringų sumą (jeigu stringas verčiasi ne į NaN);
+let stringAndNum = []
+
+for (let i = 0; i < C.length; i++){
+    console.log(typeof C[i], C[i])
+    if (typeof C[i] === "string" || typeof C[i] === "number"){
+        // let newItem = parseInt(C[i]);
+        let parsed = parseInt(C[i])
+        if(!isNaN(parsed)){
+            stringAndNum.push(parsed);
+        }
+
+    }
+}
+
+console.log(stringAndNum);
+console.log();
+
 // 9. Rasti ko yra daugiau- stringų ar skaičių;
+let stringCount = [];
+let numCount = [];
+let booleanCount = [];
+let nanCount = [];
+C.map(item => {
+    if(typeof item === "number" && typeof item != "NaN"){
+        numCount.push(item);
+    }
+})
+console.log(numCount);
+
+C.map(item => {
+    if(typeof item === "string"){
+        stringCount.push(item);
+    }
+})
+console.log(stringCount);
+
+
+C.map(item => {
+    if(typeof item === "number" && typeof item == "NaN"){
+        nanCount.push(item);
+    }
+})
+console.log(nanCount);
+
+console.log(`numbers`,numCount.length);
+console.log(`strings`,stringCount.length);
+if(numCount.length > stringCount.length){
+    console.log(`daugiau yra skaiciu`)
+} else {
+    console.log(`daugiau yra string'u`);
+}
+
+
+
 // 10. Rasti ko yra daugiau- loginių true ar false;
+C.map(item => {
+    if(typeof item === "boolean"){
+        booleanCount.push(item);
+    }
+})
+
+let trueCount = 0;
+let falseCount = 0;
+
+for (let i =0; i < booleanCount.length; i++){
+    if (booleanCount[i] === true){
+        trueCount++;
+    }else if(booleanCount[i] === false) {
+        falseCount++;
+    }
+}
+
+if (trueCount > falseCount){
+    console.log(`True reiksmiu yra daugiau`)
+} else {
+    console.log(`false teiginiu yra daugiau`)
+}
+console.log(booleanCount);
+
